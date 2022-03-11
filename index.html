@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="log.js"></script>
+    
+  <body>
+    <a-scene background="color:#026F90">
+     <a-camera wasd-controls-enabled="false" ></a-camera>
+      <!--Asset Management-->
+      <a-assets >        
+        <a-asset-item id="map" src="./assets/models/terrain/scene.gltf" >
+          
+        </a-asset-item>
+        <a-asset-item id="plane" src="./assets/models/airplane/scene.gltf" >
+          
+        </a-asset-item>
+      </a-assets>
+
+      <!-- Terrain  -->
+     <a-entity 
+     gltf-model="#map" position="0 0 -2" fly></a-entity>
+
+     <a-entity 
+     gltf-model="#plane" position="0 0 -3"  rotation="0 90 0" air></a-entity>
+
+    </a-scene>
+  </body>
+</html>
